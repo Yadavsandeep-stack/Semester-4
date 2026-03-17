@@ -19,7 +19,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		06E005E32F69B15B00356AD8 /* Semester 4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Semester 4"; sourceTree = BUILT_PRODUCTS_DIR; };
+		06949BD82F69BB370057E1E7 /* Semester 4.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Semester 4.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		06E005E32F69B15B00356AD8 /* Semester 4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "Semester 4"; path = "/Users/sandeepyadav/Desktop/Semester 4/build/Debug/Semester 4"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -44,17 +45,9 @@
 		06E005DA2F69B15B00356AD8 = {
 			isa = PBXGroup;
 			children = (
+				06949BD82F69BB370057E1E7 /* Semester 4.xcodeproj */,
 				06E005E52F69B15B00356AD8 /* Semester 4 */,
-				06E005E42F69B15B00356AD8 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		06E005E42F69B15B00356AD8 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				06E005E32F69B15B00356AD8 /* Semester 4 */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,7 +99,7 @@
 			mainGroup = 06E005DA2F69B15B00356AD8;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 06E005E42F69B15B00356AD8 /* Products */;
+			productRefGroup = 06E005DA2F69B15B00356AD8;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
