@@ -90,5 +90,61 @@ int main() {
 
 
 
+//Q.2 : Implement AVL tree
+//This is one time conversion of a binary search tree into the AVL tree using the divide and conquere algorithm
+
+class node {
+public:
+    int val;
+    node* left;
+    node* right;
+
+    node(int v) {
+        val = v;
+        left = right = NULL;
+    }
+};
 
 
+node* insertBST(node* root, int val) {
+    if (!root) return new node(val);
+
+    if (val < root->val)
+        root->left = insertBST(root->left, val);
+    else
+        root->right = insertBST(root->right, val);
+
+    return root;
+}
+
+
+void inorderPrint(node* root) {
+    if (!root) return;
+    inorderPrint(root->left);
+    cout << root->val << " ";
+    inorderPrint(root->right);
+}
+
+
+void inorderStore(node* root, vector<int>& arr) {
+    if (!root) return;
+    inorderStore(root->left, arr);
+    arr.push_back(root->val);
+    inorderStore(root->right, arr);
+}
+
+
+node* buildAVL(vector<int>& arr, int start, int end) {
+    if (start > end) return NULL;
+    int mid = (start + end) / 2;
+    node* root = new node(arr[mid]);
+    root->left = buildAVL(arr, start, mid - 1);
+    root->right = buildAVL(arr, mid + 1, end);
+    return root;
+}
+node* convertToAVL(node* root) {
+    vector<int> arr;
+    inorderStore(root, arr);
+    return buildAVL(arr, 0, arr.size() - 1);
+}
+//
