@@ -147,4 +147,28 @@ node* convertToAVL(node* root) {
     inorderStore(root, arr);
     return buildAVL(arr, 0, arr.size() - 1);
 }
-//
+    
+int main() {
+    node* root = NULL;
+
+    // Insert elements into BST
+    root = insertBST(root, 10);
+    root = insertBST(root, 5);
+    root = insertBST(root, 2);
+    root = insertBST(root, 20);
+    root = insertBST(root, 15);
+    root = insertBST(root, 30);
+
+    cout << "Original BST (Inorder): ";
+    inorderPrint(root);
+    cout << endl;
+
+    // Convert BST to AVL (balanced BST)
+    node* avlRoot = convertToAVL(root);
+
+    cout << "Balanced Tree (Inorder): ";
+    inorderPrint(avlRoot);
+    cout << endl;
+
+    return 0;
+}
